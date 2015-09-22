@@ -13,28 +13,54 @@
 <div class="col-sm-6 col-sm-offset-3">
     <div class="well" style="margin-top: 10%;">
     <h3>Send me a message</h3>
-    <form role="form" id="contactForm" data-toggle="validator" class="shake">
-        <div class="row">
-            <div class="form-group col-sm-6">
-                <label for="name" class="h4">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
-                <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-sm-6">
-                <label for="email" class="h4">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-                <div class="help-block with-errors"></div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="message" class="h4 ">Message</label>
-            <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
-            <div class="help-block with-errors"></div>
-        </div>
-        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
-        <div id="msgSubmit" class="h3 text-center hidden"></div>
-        <div class="clearfix"></div>
-    </form>
+    <form role ="form" class="form-horizontal shake" id="contactForm" data-toggle="validator">
+		<fieldset>
+			<!-- Name input-->
+			<div class="form-group">
+			    <label class="col-md-3 control-label" for="name">Name</label>
+				<div class="col-md-9">
+				  	<input id="name" name="name" type="text" placeholder="Your name" class="form-control" required data-error="Please fill in your name">
+				  	<div class="help-block with-errors"></div>
+		        </div>
+		    </div>
+		    
+			<!-- Phone input-->
+			<div class="form-group">
+				<label class="col-md-3 control-label" for="phone">Your Phone #</label>
+				<div class="col-md-9">
+					<input id="phone" type="tel" name="phone" placeholder="Your phone number" class="form-control" required>
+					<div class="help-block with-errors"></div>
+		        </div>
+		    </div>
+		    
+			<!-- Email input-->
+			<div class="form-group">
+				<label class="col-md-3 control-label" for="email">Your Email</label>
+				<div class="col-md-9">
+					<input id="email" type="email" name="email" placeholder="Your email" class="form-control" required>
+		        	<div class="help-block with-errors"></div>
+		      	</div>
+		    </div>
+		    
+			<!-- Message body -->
+			<div class="form-group">
+				<label class="col-md-3 control-label" for="message">Your message</label>
+				<div class="col-md-9">
+					<textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5" required></textarea>
+		          	<div class="help-block with-errors"></div>
+		  		</div>
+		  	</div>
+		    
+			<!-- Form actions -->
+			<div class="form-group">
+				<div id="msgSubmit" class="h3 text-center hidden"></div>
+				<div class="col-md-12 text-right">
+						<button type="submit" id="form-submit" class="btn btn-primary btn-lg">Submit</button>
+						<div class="clearfix"></div>
+				</div>
+			</div>
+		  </fieldset>
+	   	</form>
     </div>
 </div>
 </div>
