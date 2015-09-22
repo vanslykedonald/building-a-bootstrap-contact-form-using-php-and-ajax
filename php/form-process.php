@@ -16,6 +16,13 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
+// PHONE
+if (empty($_POST["phone"])) {
+    $errorMSG .= "Phone number is required ";
+} else {
+    $phone = $_POST["phone"];
+}
+
 // MESSAGE
 if (empty($_POST["message"])) {
     $errorMSG .= "Message is required ";
@@ -24,13 +31,16 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "emailaddress@test.com";
-$Subject = "New Message Received";
+$EmailTo = "donaldv@gmail.com";
+$Subject = "New Message Received from donaldv.com";
 
 // prepare email body text
 $Body = "";
 $Body .= "Name: ";
 $Body .= $name;
+$Body .= "\n";
+$Body .= "Phone: ";
+$Body .= $phone;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
